@@ -68,7 +68,7 @@ for file = pairPatches(:)' %for all of the pairs of clean and noisy images
                 var{i} = varianceForMMSE(noisy_patch, cleanPatches, sig);
                 me{i} = meanForMMSE(noisy_patch, cleanPatches, sig);
                 MMSE_U = MMSE_U + ...
-                    ( var{i} - find_center(patch)) ^ 2;
+                    ( me{i} - find_center(patch)) ^ 2;
                 % this function computes the variance of the noisy patch
                 % for all clean patches
                 MMSE_L = MMSE_L + var{i};
@@ -89,6 +89,8 @@ MMSE_L = MMSE_L/M;
 % we want to save for each mmse upper and lower as we go
 % and... oh! what filter we used. with what window size
 
-save(sprintf('%s%d', 'run', run), 'MMSE_U', 'MMSE_L', 'sig', 'windowSize','var', 'me')
+
+numCleanPatches = length(cleanPatches(:)');
+save(sprintf('%s%d', 'run', run), 'MMSE_U', 'MMSE_L', 'sig', 'windowSize','var', 'me', 'numCleanPatches')
 
 end
