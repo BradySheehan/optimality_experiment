@@ -14,8 +14,9 @@ parfor i = 1:N    %comptue the numerator and denominator
             patch = imread(char(file));
             patch = 255*im2double(patch);
             if size(patch,3) == 3 %only want color images from the db
-                numerator = numerator + gausDist(image1, patch, sig)*find_center(patch);
-                denominator = denominator + gausDist(image1, patch, sig);
+                g = gausDist(image1, patch, sig);
+                numerator = numerator + g*find_center(patch);
+                denominator = denominator + g;
             end
         end
     end

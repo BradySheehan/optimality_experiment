@@ -13,9 +13,10 @@ parfor i = 1:N    %comptue the numerator and denominator
             patch = imread(char(file));
             patch = 255*im2double(patch);
             %comptue the numerator and denominator
-            numerator = numerator + gausDist(image1, patch, sig)*...
+            g = gausDist(image1, patch,sig);
+            numerator = numerator + g*...
                 ( meanForMMSE(image1, dirFileList, sig) - find_center(patch)) ^ 2;
-            denominator = denominator + gausDist(image1, patch, sig);
+            denominator = denominator + g;
         end
     end
 end

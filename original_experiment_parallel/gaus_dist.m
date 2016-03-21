@@ -1,4 +1,4 @@
-function result = gausDist(image1, image2, sig)
+function result = gaus_dist(image1, image2, sig)
 
 %compute l2^2 norm of difference: 
 % sum abs of all the squared differences
