@@ -12,8 +12,8 @@ selection = zeros(1, size(im_cols,2));
 selection(1:num_patches) = 1;%put 1's in the zeros
 shuffled = selection(randperm(length(selection))); %permute the 1s
 matrix_selection = shuffled(ones(size(im_cols,1), 1),:); %create full mask
-temp_im_cols = im_cols + 1; %adjustment for images in [0,255]
-big_patches = matrix_selection.*temp_im_cols; %select the patches
+im_cols = im_cols + 1; %adjustment for images in [0,255]
+big_patches = matrix_selection.*im_cols; %select the patches
 patches = big_patches(big_patches~=0); %remove the zeros
 patches = patches - 1;
 % I want to reshape patches into a patch_size^2 x num_patches matrix

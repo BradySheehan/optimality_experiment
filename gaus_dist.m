@@ -1,5 +1,5 @@
-%function takes in a single patch, columwise, and a set of patches, also
-%columwise, and computes size(patch_set,2) probabilities and
+%function takes in a single patch, columnwise, and a set of patches, also
+%columnwise, and computes size(patch_set,2) probabilities and
 %returns them
 function result = gaus_dist(patch_single, patch_set, sig)
 %replicate patch_single n times where n = size(patch_set, 2);

@@ -61,6 +61,6 @@ curve2 = curve2 + 4;
 maxp4=max(max(max(curve2)))
 minp4=min(min(min(curve2)))
 figure, imagesc(curve2)
-title(strcat('The original curvature image +4, ranting from [',num2str(minp4),',',num2str(maxp4),'] viewed with imagesc'));
+title(strcat('The original curvature image +4, ranging from [',num2str(minp4),',',num2str(maxp4),'] viewed with imagesc'));
 %this image looks better to me that the one scaled between [0,255] but
 %still doesn't make a lot of sense to me.
