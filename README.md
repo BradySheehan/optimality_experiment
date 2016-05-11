@@ -19,5 +19,5 @@ Work toward reproducing levin and nadler's experiment from "Natural image denois
 
   Code that is used in conjunction with the Curvature Directory code and the Natural_Image Directory code. 
   
-  get_all_files.m - a function for getting a list of files from a specified directory.
-  find_center.m - a function that returns a vector of center pixels given a matrix of patches and the patch size
+  - get_all_files.m - a function for getting a list of files from a specified directory.
+  - find_center.m - a function that returns a vector of center pixels given a matrix of patches and the patch size
