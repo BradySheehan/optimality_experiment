@@ -1,11 +1,11 @@
 %script for randomly selecting n patches from an image
 %selecting the patches from the image with matrix multiplication with a
 %mask
-function patches = sample_n_patches_curv(im, num_patches, patch_size, filter)
+%Note that this function assumes that the image has been preprocessed (ie,
+%converted to grayscale, downsampled, and filtered with a guassianc)
+function patches = sample_n_patches_curv(im, num_patches, patch_size)
 % tic
-im = 255*im2double(rgb2gray(im));
-im = im(1:2:end,1:2:end);
-im = imfilter(im, filter, 'same');
+im = 255*im2double(im);
 im = IterativeCurvatureMinEpsilon(im);
 im_cols = im2col(im, [patch_size patch_size], 'sliding');
 % generate vector of zeros with zeros = number of patches in the image
