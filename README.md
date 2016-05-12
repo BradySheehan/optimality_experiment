@@ -3,7 +3,7 @@
 Work toward reproducing Levin and Nadler's experiment from "Natural image denoising: Optimality and inherent bounds" for bounding patch based curvature denoising algorithms with respect to mean squared error.
 
 
-* Curvature Directory:
+* Curvature Directory
   
   Core functions for performing Levin and Nadler's experiment for bounding the curvature of the level lines of an image with respect to  minimum mean squared error.
   
@@ -14,7 +14,7 @@ Work toward reproducing Levin and Nadler's experiment from "Natural image denois
   - laplace_dist.m
 
   
-* Natural_Image Directory:
+* Natural_Image Directory
 
   Core functions for reproducing the experiment performed by Levin and Nadler on natural images.
   
@@ -24,7 +24,7 @@ Work toward reproducing Levin and Nadler's experiment from "Natural image denois
   - gaus_dist.m: function that computes the probability of seeing a noisy M image patch given some clean N image patch (this function does it in blocks and reads in a single M but multiple N patches). 
  
 
-* Sampling_Code Directory:
+* Sampling_Code Directory
 
   R code that fits a Normal distribution to the number of patches to be sampled from each image according to the number of images and the desired number of total patches.
   
@@ -32,7 +32,7 @@ Work toward reproducing Levin and Nadler's experiment from "Natural image denois
   - Rplots.pdf
   - data.txt
   
-* Utilities Directory:
+* Utilities Directory
 
   Code that is used in conjunction with the Curvature Directory code and the Natural_Image Directory code. 
   
